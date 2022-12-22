@@ -20,9 +20,69 @@ body {
 .header { 
     grid-area: 1 / 2 / span 1 / span 1;
     background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: 1fr 1fr;
 }
 
+.upper-left {
+    grid-area: 1 / 1 / 2 / 7;
+    display: flex;
+    margin: 10px;
+    align-items: stretch;
+    justify-content: flex-start;
+   
+}
+
+.upper-left>.search {
+    margin: 20px;
+    background-color: lightgray;
+    border-radius: 25px;
+    flex-grow: 1;
+    padding: 10px;
+}
+.upper-right {
+    grid-area: 1 / 7 / 2 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.lower-left {
+    grid-area: 2 / 1 / 3 / 4 ;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px 40px;
+}
+
+.lower-right {
+    grid-area: 2 / 4 / 3 / 9;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.lower-left>h2 {
+    margin: 20px;
+}
+
+button {
+    background-color: aqua;
+    border-radius: 20px;
+    padding: 5px;
+    width: 100px;
+    margin: 20px;
+    color: black;
+    font-weight: bold;
+}
 .main-content {
     grid-area: 2 / 2 / span 1 / span 1;
     background-color:slategray;
+}
+
+img {
+    border-radius: 50%;
 }
